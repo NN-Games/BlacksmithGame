@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Ray r = cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(r, out var hitInfo, 1000, clickableLayer))
+            if (Physics.Raycast(r, out var hitInfo, 100, clickableLayer))
             {
                 _playerAgent.SetDestination(hitInfo.point);
             }
